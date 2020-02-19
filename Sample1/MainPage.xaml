@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.MainPage">
+    <StackLayout Margin="10,35,10,10">
+        <Label Text="Morse Code"
+               HorizontalOptions="Center"
+               FontAttributes="Bold" />
+        <Editor x:Name="output"
+                Placeholder="Enter your note"
+                HeightRequest="100" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Button Text="."
+                    Clicked="typePeriod"
+                    FontSize="200"/>
+            <Button Grid.Column="1"
+                    Text="-"
+                    Clicked="typeDash"
+                    FontSize="200"/>
+            <Button Grid.Column="2"
+                    Text="Space"
+                    Clicked="typeSpace"
+                    FontSize="80"/>
+        </Grid>
+    </StackLayout>
+</ContentPage>
